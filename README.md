@@ -25,7 +25,7 @@
 
  ![image-3](https://raw.githubusercontent.com/SuperXingKong/LoginWifi/main/tutorial/3.png)
 
-2. 配置账号密码
+4. 配置账号密码
 
 1)将LoginWifi,py与LoginWifi.bat放在同一文件夹下（建议放在桌面上,点LoginWifi.bat的时候更方便）
 
