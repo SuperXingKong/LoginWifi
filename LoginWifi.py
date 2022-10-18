@@ -4,8 +4,15 @@ import socket
 import re
 import os
 
-IP = socket.gethostbyname(socket.gethostname())
+def GetLocalIPByPrefix(prefix):
+    """ Multiple IP due to VMWare service """
+    localIP = ''
+    for ip in socket.gethostbyname_ex(socket.gethostname())[2]:
+        if ip.startswith(prefix):
+            localIP = ip
+    return localIP
 
+IP = GetLocalIPByPrefix("10")
 
 def is_set_account():
     if os.path.exists("account.json"):
